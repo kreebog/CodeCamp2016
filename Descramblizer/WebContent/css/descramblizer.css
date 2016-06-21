@@ -1,0 +1,22 @@
+body {
+	background-color: #eee;
+	color: black;
+}
+
+#title {
+	text-align: center;
+}
+
+.spacer {
+	display: block;
+	margin-top: 24px;
+}
+
+.letterTile {
+	margin-left: 3px;
+	margin-right: 3px;
+	height: 48px;
+	width: 48px;
+	box-shadow: 2px 2px 4px #333;
+}
+
