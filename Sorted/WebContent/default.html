@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sort me...</title>
+		<script src="javascript/jquery/jquery-3.0.0.min.js"></script>
+		<script src="javascript/sorted.js"></script>	
+	
+		<!-- include the custom styesheet for our Descramblizer page -->
+		<link type="text/css" rel="stylesheet" href="css/sorted.css" > 
+	
+	</head>
+	<body>
+		<h1>Sort this garbage...</h1>
+		<div id="asciiArt"></div>
+	</body>
+
+<script>
+	drawArtPointGrid(unscrambled, 160);
+	var scram = scrambleTheArt(unscrambled);
+	var updateCnt = 0;
+	
+	window.setInterval( function() { 
+		scram = bubbleSortPoints(scram);
+		updateCnt++;
+		
+		if (updateCnt % 100 == 0) {
+			updateCnt = 0;
+			fillArtPointGridFromArray(scram, 160); 
+		}
+	}, 0);
+
+</script>
+</html>
