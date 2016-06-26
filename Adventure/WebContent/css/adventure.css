@@ -70,8 +70,13 @@ body {
 	float: right;
     border-radius: 3px;
     border: solid 1px black;
-    background-color: tan;
     color: black;
+	cursor: pointer;
+    background-color: transparent;
+}
+
+.restartButton:hover {
+    background-color: yellow;
 }
 
 .choiceButton {
@@ -93,4 +98,8 @@ body {
 	display: inline-block;
 	text-shadow:0px 1px 0px black;
 	box-shadow:0px 2px 2px black;
+}
+
+.choiceButton:hover {
+    color: orange;
 }
