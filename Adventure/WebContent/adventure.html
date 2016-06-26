@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="ISO-8859-1">
+	<title>Adventure</title>
+		<link rel="stylesheet" type="text/css" href="css/adventure.css">
+		<script src="javascript/myStory.js"></script>
+		<script src="javascript/adventure.js"></script>
+	</head>
+
+	<body onload="startStory();">
+		<div id="container">
+			<h1 id="storyTitle">The Title of the Story</h1> 
+			<div id="storyArea">
+				<button class="restartButton" onclick="loadChapter(0);">Start Over</button>
+				<h3 id="chapterTitle">Chapter Title</h3>
+				<p id="chapterText">Here's where the actual text of the chapter will go.</p>
+			</div>
+			<span id="choices">
+				<button class="choiceButton" id="choice_1">Choice #1</button>
+				<button class="choiceButton" id="choice_2">Choice #2</button>
+			</span>
+		</div>
+	</body>
+</html>
+
