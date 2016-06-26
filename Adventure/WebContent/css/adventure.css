@@ -76,7 +76,7 @@ body {
 }
 
 .restartButton:hover {
-    background-color: yellow;
+    background-color: orange;
 }
 
 .choiceButton {

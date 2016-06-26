@@ -9,19 +9,19 @@ var currentPageNumber = 0;	// number variable used to keep track of the page num
  * 
  */
 function startStory() {
-	setStoryTitle(myStory.title);
+	setStoryTitle(story.title);
 	loadChapter(0);
 }
 
 
 function loadChapter(chapterId) {
-	setChapterTitle(myStory.chapters[chapterId].title);
-	setChapterText(myStory.chapters[chapterId].text);
+	setChapterTitle(story.chapters[chapterId].title);
+	setChapterText(story.chapters[chapterId].text);
 	
 	clearChoices();
-	for (x = 0; x < myStory.chapters[chapterId].choices.length; x++) {
+	for (x = 0; x < story.chapters[chapterId].choices.length; x++) {
 		console.log ("Adding Choice " + x);
-		addChoice(myStory.chapters[chapterId].choices[x]);
+		addChoice(story.chapters[chapterId].choices[x]);
 	}
 	
 }

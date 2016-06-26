@@ -1,4 +1,4 @@
-var myStory = {
+var story = {
 	"title":"A Pirate's Life", 
 	"authors": {
 		"name": "James Dean", 
@@ -24,7 +24,7 @@ var myStory = {
 			"title": "Heading East",
 			"author": "Jimmy Dean",
 			"text": 
-					"You order the helmsman to turn right and head east as the brutally hot sun slowly starts to drop behind you.  True to Duncan's word, the cry of 'Land Ho!' rings out from the crow's nest just before the sun touches the water.  <br><br>Squinting through your foggy telescope, you see a lush, green coastline edged with glimmering beaches and what appears to be a city made of gold.",
+					"You order the helmsman to turn right and head east as the brutally hot sun slowly starts to drop behind you.  True to Duncan's word, the cry of 'Land Ho!' rings out from the crow's nest just before the sun touches the water.  <br><br>Squinting through your foggy telescope, you see a lush, green coastline edged with glimmering beaches... <i>and what appears to be a city made of gold</i>.",
 			"choices" : [  
 				{"id": 1, "text": "Move Closer", "nextChapterId": 4},
 				{"id": 2, "text": "Drop Anchor for the Night", "nextChapterId": 5},
