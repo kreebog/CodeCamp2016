@@ -1,5 +1,13 @@
+/*
+ * 
+ * JSON (JavaScript Object Notation) is one of the most popular ways to organize and transmit structured data
+ * 
+ * 
+ * 
+ */
+
 var story = {
-	"title":"A Pirate's Life", 
+	"title": "A Pirate's Life", 
 	"authors": {
 		"name": "James Dean", 
 		"name": "Jimmy Dean", 
@@ -17,7 +25,6 @@ var story = {
 				{"id": 2, "text": "Keep Sailing North", "nextChapterId": 2},
 				{"id": 3, "text": "Slap Duncan", "nextChapterId": 3}
 			]
-			
 		},
 		{
 			"id": 1,
@@ -30,7 +37,6 @@ var story = {
 				{"id": 2, "text": "Drop Anchor for the Night", "nextChapterId": 5},
 				{"id": 3, "text": "Turn Back Now", "nextChapterId": 0}
 			]
-			
 		}
 	]
 }
