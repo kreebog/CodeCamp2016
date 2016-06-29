@@ -1,3 +1,22 @@
+var strStoryTitle = "This is the title of the story.";
+
+var strChapterTitles = [
+                     "Chapter 1: The First Chapter",
+					 "Chapter 2: The Second Chapter",
+					 "Chapter 3: The Third Chapter",
+					 "Chapter 4: The Fourth Chapter",
+					 "Chapter 5: The Fifth Chapter"
+];
+
+var strChapterTexts = [
+                   "This is the body of the FIRST chapter.  This is where the story goes, but only for chapter 1.",
+                   "This is the body of the SECOND chapter.  This is where the story goes, but only for chapter 2.",
+                   "This is the body of the THIRD chapter.  This is where the story goes, but only for chapter 3.",
+                   "This is the body of the FOURTH chapter.  This is where the story goes, but only for chapter 4.",
+                   "This is the body of the FIFTH chapter.  This is where the story goes, but only for chapter 5."
+];
+
+
 /*
  * startStory() 
  * 
@@ -6,7 +25,7 @@
  * 
  */
 function startStory() {
-	setStoryTitle(story.title);
+	setStoryTitle(strStoryTitle);
 	
 	// To reset / start the story, we simply
 	// load the first chapter (ID = 0)
@@ -51,11 +70,10 @@ function setStoryTitle(strStoryTitle) {
 	// lets us see quickly that this variable is a string.    
 	// The "ele" prefix indicates an element within the HTML Document. 
 
-	// use jQuery to find the HTML Element with the id "storyTitle"
-	var eleStoryTitle = $("#storyTitle");
+	// use jQuery to find the HTML Element with the id "storyTitle" and set the HTML 
+	// content of the element to the strStoryTitle parameter's value
 	
-	// and set the HTML of that element to the string parameter "strStoryTitle" 
-	eleStoryTitle.html(strStoryTitle);
+	$("#storyTitle").html(strStoryTitle);
 }
 
 /*
@@ -107,7 +125,7 @@ function addChoice(choice) {
 	var eleChoices = $("#choices");
 
 	// Prebuild the choice button's HTML.  
-	// 		Notice that broken strings can be split across multiple lines...
+	// 		Notice that broken strings can be split across multiple lines if you split them after a "+"
 	// 		this makes the code easier to read, which is always good! 
 	var strChoiceButtonHTML = "<button class='choiceButton' id='choice_" + choice.id + 
 							  "' onclick='loadChapter(" + choice.nextChapterId + ")'>" + choice.text + 
