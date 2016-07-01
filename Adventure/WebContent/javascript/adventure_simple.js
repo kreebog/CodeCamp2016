@@ -8,7 +8,7 @@ var strStoryTitle = "The Title of the Story";
 	var arrChapterTitles = new Array();
 	arrChapterTitles.push("A CHAPTER TITLE");
 	 
- * BUT - don't forget that Array's are "zero-based!"
+ * 	... DON'T FORGET:  Arrays are "zero-based!"
  */
 
 /* strChapterTitles is an array containing our chapter's titles
@@ -182,7 +182,11 @@ function setChapterText(strChapterText) {
 }
 
 /*
- * Removes all choice buttons from the page
+ * Removes all choice buttons from the page.
+ * 
+ * GO ADVANCED: Reduce this function to a single line of code (comments don't count) 
+ * 	(HINT: You have to do it without using any variables)
+ * 	(Another HINT: The jQuery page of the presentation is a good example!)
  */  
 function clearChoices() {
 	// use jQuery to find the HTML Element with the id "choices"
@@ -200,6 +204,13 @@ function clearChoices() {
  * @intNextChapterId : The chapter that will be loaded if this choice button is clicked.
  * 
  */
+
+/* GO SUPER-ADVANCED: Add support for different colored buttons using jQuery!
+ * 
+ * 	1) Add a string parameter to the function: strButtonColor
+ *  2) Add a line to the strChioceButtonHTML string in the correct place: " style='background-color:" + strButtonColor + "'" +
+ *  3) Update your addChoice function calls to provide one of the basic named color values (red, orange, blue, green, gray, black, etc...)    
+ */
 function addChoice(strChoiceText, intNextChapterID) {
 	// use jQuery to find the HTML Element with the id "choices"
 	var eleChoices = $("#choices");
@@ -208,7 +219,8 @@ function addChoice(strChoiceText, intNextChapterID) {
 	// 		Notice that broken strings can be split across multiple lines if you split them after a "+"
 	// 		this makes the code easier to read, which is always good! 
 	var strChoiceButtonHTML = "<button class='choiceButton'" + 
-							  "' onclick='loadChapter(" + intNextChapterID + ")'>" + strChoiceText +
+							  
+							  " onclick='loadChapter(" + intNextChapterID + ")'>" + strChoiceText +
   							  " </button>\r\n"; 
 	// Append the new choice button's HTML to the choices element on the page
 	// We can do this as many times as we like to add new buttons, but if there are too 
