@@ -5,15 +5,20 @@
 	<title>Adventure</title>
 		<link rel="stylesheet" type="text/css" href="css/adventure.css">
 		<script src="javascript/jquery/jquery-3.0.0.min.js"></script>
+
+		<script src="javascript/adventure_simple.js"></script>
+
+<!-- 
 		<script src="javascript/myStory.js"></script>
-		<script src="javascript/adventure.js"></script>
+		<script src="javascript/adventure_advanced.js"></script>
+-->
 	</head>
 
 	<body onload="startStory();">
 		<div id="container">
 			<h1 id="storyTitle">The Title of the Story</h1> 
 			<div id="storyArea">
-				<button class="restartButton" onclick="loadChapter(0);">Start Over</button>
+				<button class="restartButton" onclick="loadChapter(1);">Start Over</button>
 				<h3 id="chapterTitle">Chapter Title</h3>
 				<p id="chapterText">Here's where the actual text of the chapter will go.</p>
 			</div>

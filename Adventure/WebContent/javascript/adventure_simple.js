@@ -1,21 +1,50 @@
-var strStoryTitle = "This is the title of the story.";
+// GO ADVANCED:  Use GLOBAL_VARIABLES to identify your chapters by number:  int CHAPTER_ONE_ID = 1; 
+// GO SUPER-ADVANCED:  Use an ENUMERATION to identify your chapters by number!  
 
+var strStoryTitle = "The Title of the Story";
+
+/* GO ADVANCED: Replace this "in-line" array declaration with an explicit declaration and use the .push() function to add your chapter titles:
+ * 
+	var arrChapterTitles = new Array();
+	arrChapterTitles.push("A CHAPTER TITLE");
+	 
+ * BUT - don't forget that Array's are "zero-based!"
+ */
+
+/* strChapterTitles is an array containing our chapter's titles
+ * 
+ * To make things easier to follow, we're setting the first element in the 
+ * 	array to an empty string ("") pretending that it doesn't exist so that 
+ * 	our ChapterID numbers match up with our actual chapter numbers... basically
+ * 	pretending that our arrays are "one-based" instead of "zero-based."
+ */ 
 var strChapterTitles = [
-                     "Chapter 1: The First Chapter",
-					 "Chapter 2: The Second Chapter",
-					 "Chapter 3: The Third Chapter",
-					 "Chapter 4: The Fourth Chapter",
-					 "Chapter 5: The Fifth Chapter"
+                     "", // intentionally left blank  
+                     "The First Chapter",
+					 "The Second Chapter",
+					 "The Third Chapter",
+					 "The Fourth Chapter",
+					 "The Fifth Chapter",
+					 "You're Dead :(",
+					 "You've Survived :)"
 ];
 
-var strChapterTexts = [
+/* strChapterBodies is an array containing the actual body of each chapter. 
+ * 
+ * Again, we're setting the first element in the array to an empty 
+ * 	string ("") so that we can make the intChapterID values match up 
+ * 	with our actual chapter numbers. 
+ */ 
+var strChapterBodies = [
+                   "", // this is the "zero" position of the array - to make the code easier to manage, we won't use it.
                    "This is the body of the FIRST chapter.  This is where the story goes, but only for chapter 1.",
                    "This is the body of the SECOND chapter.  This is where the story goes, but only for chapter 2.",
                    "This is the body of the THIRD chapter.  This is where the story goes, but only for chapter 3.",
                    "This is the body of the FOURTH chapter.  This is where the story goes, but only for chapter 4.",
-                   "This is the body of the FIFTH chapter.  This is where the story goes, but only for chapter 5."
+                   "This is the body of the FIFTH chapter.  This is where the story goes, but only for chapter 5.",
+                   "YOU HAVE DIED IN CHAPTER SIX.",
+                   "Congratulations, you've reached the last chapter (seven) of this story and you're still ALIVE!!!"
 ];
-
 
 /*
  * startStory() 
@@ -28,34 +57,87 @@ function startStory() {
 	setStoryTitle(strStoryTitle);
 	
 	// To reset / start the story, we simply
-	// load the first chapter (ID = 0)
-	loadChapter(0);
+	// load the first chapter (ID = 1)
+	loadChapter(1);
 }
 
 /*
+ * loadChapter(intChapterID) 
+ * @intChapterID:  The chapter number that we want to load.
+ * 
  * Loads the chapter's title and text for the chapter
  * with the given intChapterID.  
  * 
  * The prefix "int" on "intChapterID" let's us know that that
  * required parameter is a number (an integer, specifically). 
  * 
+ * GO ADVANCED: Replace the IF statements with a "SWITCH" statement:
+ 
+	switch (intChapterID) {
+		case 1: 
+			addChoice("SAMPLE", 2); 
+			addChoice("ANOTHER SAMPLE ", 3);
+			break;
+		case 2: ... and so on 
+	}	
  * 
  */
 function loadChapter(intChapterID) {
 	
 	// set the chapter title
-	setChapterTitle(story.chapters[intChapterID].title);
+	setChapterTitle(strChapterTitles[intChapterID]);
 	
 	// and set the chapter text
-	setChapterText(story.chapters[intChapterID].text);
+	setChapterText(strChapterBodies[intChapterID]);
 	
 	// clear out the existing choises
 	clearChoices();
+
+	// add choices for CHAPTER 1 
+	// (remember - arrays are zero-based, so "Chapter 1" is actuallyin array position 0!)
+	if (intChapterID == 1) {
+		addChoice("Go to Chapter 2", 2);
+		addChoice("Go to Chapter 3", 3);
+	} // end choices for CHAPTER 1
 	
-	// then load the choices for the current chapter onto the page
-	for (var intChoicesPos = 0; intChoicesPos < story.chapters[intChapterID].choices.length; intChoicesPos++) {
-		addChoice(story.chapters[intChapterID].choices[intChoicesPos]);
+	// add choices for CHAPTER 2 
+	if (intChapterID == 2) {
+		addChoice("Back to Chapter 1", 1);
+		addChoice("Go to Chapter 4", 4);
 	}
+
+	// add choices for CHAPTER 3 
+	if (intChapterID == 3) {
+		addChoice("Go to Chapter 5", 5);
+		addChoice("Make a HUGE Mistake", 6);
+	}
+
+	// add choices for CHAPTER 4 
+	if (intChapterID == 4) {
+		addChoice("Go to the end (WIN)", 7);
+		addChoice("Back to Chapter 2", 2);
+	}
+
+	// add choices for CHAPTER 5 
+	if (intChapterID == 5) {
+		addChoice("Make a HUGE Mistake", 6);
+		addChoice("Go to the end (WIN)", 7);
+	}
+
+	// add choices for CHAPTER 6 
+	if (intChapterID == 6) {
+		addChoice("Oops... Start Over", 1);
+	}
+
+	// add choices for CHAPTER 7 
+	if (intChapterID == 7) {
+		addChoice("You won!  Play again?", 1);
+	}
+
+	
+	// GO ADVANCED AGAIN: Can your code handle it if an invalid intChapterID is given?  
+		// Hint: "If ... Else" statements
+		// Hint: If you're using "switch" - use the "default" case to handle invalid intChapterID values! 
 	
 }
 
@@ -68,10 +150,9 @@ function loadChapter(intChapterID) {
 function setStoryTitle(strStoryTitle) {
 	// The prefix "str" on the parameter variable "strStoryTitle" let
 	// lets us see quickly that this variable is a string.    
-	// The "ele" prefix indicates an element within the HTML Document. 
 
-	// use jQuery to find the HTML Element with the id "storyTitle" and set the HTML 
-	// content of the element to the strStoryTitle parameter's value
+	// use jQuery to find the HTML Element with the id "storyTitle" and set
+	// the HTML content of the element to the strStoryTitle parameter's value
 	
 	$("#storyTitle").html(strStoryTitle);
 }
@@ -115,22 +196,21 @@ function clearChoices() {
  * Add a choice to the page by appending (adding onto the end) HTML tags
  * to the choices HTML element.
  * 
- * @choice - an object represntation of a JSON data structure:
- * 		id: Number indicating choice ID
- * 		text: The text of the choice to be displayed on the screen
- * 		nextChapterId: The idea of the chapter that the choice will lead to
+ * @strChoiceText : The text that will appear on the button for this choice 
+ * @intNextChapterId : The chapter that will be loaded if this choice button is clicked.
+ * 
  */
-function addChoice(choice) {
+function addChoice(strChoiceText, intNextChapterID) {
 	// use jQuery to find the HTML Element with the id "choices"
 	var eleChoices = $("#choices");
 
 	// Prebuild the choice button's HTML.  
 	// 		Notice that broken strings can be split across multiple lines if you split them after a "+"
 	// 		this makes the code easier to read, which is always good! 
-	var strChoiceButtonHTML = "<button class='choiceButton' id='choice_" + choice.id + 
-							  "' onclick='loadChapter(" + choice.nextChapterId + ")'>" + choice.text + 
-							  " </button>\r\n"; 
-	// Wppend the new choice button's HTML to the choices element on the page
+	var strChoiceButtonHTML = "<button class='choiceButton'" + 
+							  "' onclick='loadChapter(" + intNextChapterID + ")'>" + strChoiceText +
+  							  " </button>\r\n"; 
+	// Append the new choice button's HTML to the choices element on the page
 	// We can do this as many times as we like to add new buttons, but if there are too 
 	// many buttons, the page won't look very good.
 	eleChoices.append(strChoiceButtonHTML);
