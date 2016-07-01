@@ -1,8 +1,10 @@
 /*
  * 
- * JSON (JavaScript Object Notation) is one of the most popular ways to organize and transmit structured data
+ * JSON (JavaScript Object Notation) is one of the most popular ways to organize and transmit structured data.
  * 
- * 
+ * This sample story shows how you could use JSON data to organize your story and load it 
+ * 	directly into a JavaScript Object.  This approach is what I used to make "adventure_advanced.js" 
+ *  work with such little code.  
  * 
  */
 
