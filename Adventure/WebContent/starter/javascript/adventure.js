@@ -8,33 +8,17 @@
 
 var strStoryTitle = "The Title of the Story";
 
+
+//TODO:  YOU NEED TO DEFINE YOUR ARRAY OF CHAPTER TITLES!
+
 /* GO ADVANCED #GA2: Replace the "in-line" array declarations with an explicit declaration and use the .push() 
  * 	function to add your chapter titles. But DON'T FORGET:  Arrays are "zero-based!"
 	
-	var arrChapterTitles = new Array();
-	arrChapterTitles.push("The Chapter Title");
+	var strChapterBodies = new Array();
+	strChapterBodies.push("This is the body of the chapter...");
  */
 
 /* GO ADVANCED #GA3: Remove the zero-position array buffers and learn to deal with zero-based arrays! 
-
-/* strChapterTitles is an array containing our chapter's titles
- * 
- * To make things easier to follow, we're setting the first element in the 
- * 	array to an empty string ("") pretending that it doesn't exist so that 
- * 	our ChapterID numbers match up with our actual chapter numbers... basically
- * 	pretending that our arrays are "one-based" instead of "zero-based."
- */ 
-
-var arrStrChapterTitles = [
-                     "", // intentionally left blank  
-                     "The First Chapter",
-					 "The Second Chapter",
-					 "The Third Chapter",
-					 "The Fourth Chapter",
-					 "The Fifth Chapter",
-					 "You're Dead :(",
-					 "You've Survived :)"
-];
 
 /* strChapterBodies is an array containing the actual body of each chapter. 
  * 
@@ -72,7 +56,6 @@ function startStory() {
  * @intChapterID:  The chapter number that we want to load.
  * 
  * Loads the chapter's title and text for the chapter
- * with the given intChapterID.  
  * 
  * The prefix "int" on "intChapterID" let's us know that that
  * required parameter is a number (an integer, specifically). 
@@ -90,9 +73,8 @@ function startStory() {
  */
 function loadChapter(intChapterID) {
 	
-	// set the chapter title
-	setChapterTitle(arrStrChapterTitles[intChapterID]);
-	
+	//TODO: YOU NEED TO ADD A CALL TO YOUR FUNCTION THAT SETS THE CHAPTER TITLE 
+
 	// and set the chapter text
 	setChapterBody(arrStrChapterBodies[intChapterID]);
 	
@@ -160,17 +142,8 @@ function setStoryTitle(strStoryTitle) {
 	$("#storyTitle").html(strStoryTitle);
 }
 
-/*
- * function setChapterTitle(string strChapterTitle)
- * @strChapterTitle: string containing the current chapter's title 
- */
-function setChapterTitle(strChapterTitle) {
-	// use jQuery to find the HTML Element with the id "chapterTitle"
-	var eleChapterTitle = $("#chapterTitle");
 
-	// and set the HTML of that element to the string parameter "strChapterTitle" 
-	eleChapterTitle.html(strChapterTitle);
-}
+//TODO: YOU NEED TO ADD A FUNCTION TO SET THE CHAPTER TITLE!!! 
 
 /*
  * function setChapterText(string strChapterText)
