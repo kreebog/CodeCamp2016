@@ -1,15 +1,18 @@
-// GO ADVANCED:  Use GLOBAL_VARIABLES to identify your chapters by number:  int CHAPTER_ONE_ID = 1; 
-// GO SUPER-ADVANCED:  Use an ENUMERATION to identify your chapters by number!  
+// GO ADVANCED #GA1:  Use GLOBAL_VARIABLES to identify your chapters by number to map against your various chapter arrays:  
+// 	 int CHAPTER_ONE_ID = 1; 
+// 
+// GO SUPER-ADVANCED (#SA1):  Use an ENUMERATION to identify your chapters by number!  
 
 var strStoryTitle = "The Title of the Story";
 
-/* GO ADVANCED: Replace this "in-line" array declaration with an explicit declaration and use the .push() function to add your chapter titles:
- * 
+/* GO ADVANCED #GA2: Replace the "in-line" array declarations with an explicit declaration and use the .push() 
+ * 	function to add your chapter titles. But DON'T FORGET:  Arrays are "zero-based!"
+	
 	var arrChapterTitles = new Array();
-	arrChapterTitles.push("A CHAPTER TITLE");
-	 
- * 	... DON'T FORGET:  Arrays are "zero-based!"
+	arrChapterTitles.push("The Chapter Title");
  */
+
+/* GO ADVANCED #GA3: Remove the zero-position array buffers and learn to deal with zero-based arrays! 
 
 /* strChapterTitles is an array containing our chapter's titles
  * 
@@ -18,7 +21,8 @@ var strStoryTitle = "The Title of the Story";
  * 	our ChapterID numbers match up with our actual chapter numbers... basically
  * 	pretending that our arrays are "one-based" instead of "zero-based."
  */ 
-var strChapterTitles = [
+
+var arrStrChapterTitles = [
                      "", // intentionally left blank  
                      "The First Chapter",
 					 "The Second Chapter",
@@ -35,7 +39,7 @@ var strChapterTitles = [
  * 	string ("") so that we can make the intChapterID values match up 
  * 	with our actual chapter numbers. 
  */ 
-var strChapterBodies = [
+var arrStrChapterBodies = [
                    "", // this is the "zero" position of the array - to make the code easier to manage, we won't use it.
                    "This is the body of the FIRST chapter.  This is where the story goes, but only for chapter 1.",
                    "This is the body of the SECOND chapter.  This is where the story goes, but only for chapter 2.",
@@ -71,7 +75,7 @@ function startStory() {
  * The prefix "int" on "intChapterID" let's us know that that
  * required parameter is a number (an integer, specifically). 
  * 
- * GO ADVANCED: Replace the IF statements with a "SWITCH" statement:
+ * GO ADVANCED #GA4: Replace the IF statements with a "SWITCH" statement:
  
 	switch (intChapterID) {
 		case 1: 
@@ -85,10 +89,10 @@ function startStory() {
 function loadChapter(intChapterID) {
 	
 	// set the chapter title
-	setChapterTitle(strChapterTitles[intChapterID]);
+	setChapterTitle(arrStrChapterTitles[intChapterID]);
 	
 	// and set the chapter text
-	setChapterText(strChapterBodies[intChapterID]);
+	setChapterText(arrStrChapterBodies[intChapterID]);
 	
 	// clear out the existing choises
 	clearChoices();
@@ -135,9 +139,9 @@ function loadChapter(intChapterID) {
 	}
 
 	
-	// GO ADVANCED AGAIN: Can your code handle it if an invalid intChapterID is given?  
-		// Hint: "If ... Else" statements
-		// Hint: If you're using "switch" - use the "default" case to handle invalid intChapterID values! 
+	// GO ADVANCED #GA5: Can your code handle it if an invalid intChapterID is given?  
+	// 	Hint: "If ... Else" statements
+	// 	Hint: If you're using "switch" - use the "default" case to handle invalid intChapterID values! 
 	
 }
 
@@ -184,7 +188,7 @@ function setChapterText(strChapterText) {
 /*
  * Removes all choice buttons from the page.
  * 
- * GO ADVANCED: Reduce this function to a single line of code (comments don't count) 
+ * GO ADVANCED #GA6: Reduce this function to a single line of code (comments don't count) 
  * 	(HINT: You have to do it without using any variables)
  * 	(Another HINT: The jQuery page of the presentation is a good example!)
  */  
@@ -205,7 +209,7 @@ function clearChoices() {
  * 
  */
 
-/* GO SUPER-ADVANCED: Add support for different colored buttons using jQuery!
+/* GO SUPER-ADVANCED #SA2: Add support for different colored buttons using jQuery!
  * 
  * 	1) Add a string parameter to the function: strButtonColor
  *  2) Add a line to the strChioceButtonHTML string in the correct place: " style='background-color:" + strButtonColor + "'" +

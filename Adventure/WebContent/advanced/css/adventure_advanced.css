@@ -12,7 +12,7 @@ html {
 	/* apocalyptic_background.jpg 	*/ 
   
 	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), 
-				url(../images/farm_background.jpg) no-repeat center center fixed; 
+				url(../images/pirate_background.jpg) no-repeat center center fixed; 
 	
 	/* tells the browser to fill the whole background with the image  */
 	background-size: cover;
