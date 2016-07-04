@@ -36,7 +36,7 @@ var story = {
 			"id": 2,
 			"title": "Cannon Fodder",
 			"text": 
-					"As you approach the golden city, the glint of the sunlight flashes from the glittering barrels of a hundred golden cannons as they turn to aim at your ship.  You order the helmsman to turn the ship around, but it's already too late.  <br><br>'Abandon ship!' you yell as your splintered, burning boat sinks into the blue waves.  You cling to the wheel as your men dive overboard... the captain always goes down with the ship.  <br><br><center>THE END</center>",
+					"As you approach the golden city, the glint of the sunlight flashes from the glittering barrels of a hundred golden cannon as they turn to aim at your ship.  You order the helmsman to turn the ship around, but it's already too late.  <br><br>'Abandon ship!' you yell as your splintered, burning boat sinks into the blue waves.  You cling to the wheel as your men dive overboard... the captain always goes down with the ship.  <br><br><center>THE END</center>",
 			"choices" : [  
 				{"id": 1, "text": "Start Over?", "nextChapterId": 0},
 			]
@@ -54,7 +54,7 @@ var story = {
 			"id": 4,
 			"title": "Meet the Fleet",
 			"text": 
-					"Duncan's advice hasn't been very good lately, so you decide to ignore his recommendation and keep heading north.  A few short hours later you pass through a mysterious bank of fog.  The crew becomes nervous and urges you to turn back, but you drive on and eventually the fog thins and you find yourself in clear air... and face to face with The Queen's Fleet.  <br><br>The HMS Dauntless starts to turn broadside, pointing her 24 iron cannons in your direction as the rest of the fleet fans out behind her.  The mysterious fog bank lies just to the south, maybe you could get away...",
+					"Duncan's advice hasn't been very good lately, so you decide to ignore his recommendation and keep heading north.  A few short hours later you pass through a mysterious bank of fog.  The crew becomes nervous and urges you to turn back, but you drive on and eventually the fog thins and you find yourself in clear air... and face to face with The Queen's Fleet.  <br><br>The HMS Dauntless starts to turn broadside, pointing her 24 iron cannon in your direction as the rest of the fleet fans out behind her.  The mysterious fog bank lies just to the south, maybe you could get away...",
 			"choices" : [  
 				{"id": 1, "text": "Turn Back South", "nextChapterId": 0},
 				{"id": 2, "text": "Stay and Fight", "nextChapterId": 5},
@@ -65,7 +65,7 @@ var story = {
 			"id": 5,
 			"title": "Outgunned",
 			"text": 
-					"You turn your ship hard to port as the HSM Dauntless unleashes a hail of 12-pound, iron hail on you.  Before your cannons can be brought to bear, starboard hull is a shattered, smoking ruin.  The force of the impact has turned your bow back toward the HMS Dauntless and a sudden gust of wind fills your sails.  Your ship begins to pick up speed even as she starts taking on water, already listing to starboard...",
+					"You turn your ship hard to port as the HSM Dauntless unleashes 12-pound, iron hail on you.  Before your cannon can be brought to bear, your starboard hull is a shattered, smoking ruin.  The force of the impact has turned your bow back toward the HMS Dauntless and a sudden gust of wind fills your sails.  Your ship begins to pick up speed even as she starts taking on water, already listing to starboard...",
 			"choices" : [  
 				{"id": 1, "text": "Abandon Ship", "nextChapterId": 6},
 				{"id": 2, "text": "Ramming Speed!", "nextChapterId": 7},
@@ -84,7 +84,7 @@ var story = {
 			"id": 7,
 			"title": "A Watery Grave",
 			"text": 
-					"'RAMMING SPEED!' you cry, grabbing the wheel and keeping your ship on a collision course with the massive HMS Dauntless.  The Dauntless's cannons fire again and again as you approach, but the narrow target you present to the enemy ship makes you harder to hit.  <br><br>There's a deafening crash as your ship's ram smashes into the Dauntless's broad, barrel-shaped side.  Your ship crumples around you as your men scramble up onto the Dauntless, swords and daggers in hand as they prepare to fight for their lives.  <br><br>You grin your wicked, pirate's grin and cling to the wheel as your ship takes on water, proud to have damaged the Queen's flagship, but resigned to your doom.  After all, the captain always goes down with the ship. <br><br><center>THE END</center>",
+					"'RAMMING SPEED!' you cry, grabbing the wheel and keeping your ship on a collision course with the massive HMS Dauntless.  The Dauntless's cannon fire again and again as you approach, but the narrow target you present to the enemy ship makes you harder to hit.  <br><br>There's a deafening crash as your ship's ram smashes into the Dauntless's broad, barrel-shaped side.  Your ship crumples around you as your men scramble up onto the Dauntless, swords and daggers in hand as they prepare to fight for their lives.  <br><br>You grin your wicked, pirate's grin and cling to the wheel as your ship takes on water, proud to have damaged the Queen's flagship, but resigned to your doom.  After all, the captain always goes down with the ship. <br><br><center>THE END</center>",
 			"choices" : [  
 				{"id": 1, "text": "Start Over?", "nextChapterId": 0},
 			]
